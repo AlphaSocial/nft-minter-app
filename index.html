@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Social Murder Mystery Tickets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Add ethers.js library here -->
+    <script src="https://cdn.ethers.org/lib/ethers-5.7.umd.min.js" onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js';"></script>
+</head>
+<body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading Characters...</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">WHO KILLED CASSIE?</h1>
+            <p class="subtitle">Vote for the character you think is guilty and collect character tickets!</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number" id="totalVotes">0</div>
+                <div class="stat-label">Total Votes</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number" id="ownedTickets">0</div>
+                <div class="stat-label">Your Tickets</div>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cardsContainer">
+            <!-- Cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div class="status-message" id="statusMessage"></div>
+
+    <!-- Ticket Purchase Modal -->
+    <div class="modal" id="ticketModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2 style="text-align: center;">Purchase Character Ticket</h2>
+            
+            <div class="ticket-preview" id="ticketPreview">
+                <div class="ticket-title">ALPHA SOCIAL</div>
+                <img id="characterPreviewImage" src="" alt="Character">
+                <div class="ticket-mystery">WHO KILLED CASSIE?</div>
+                <div class="ticket-name" id="characterPreviewName">CHARACTER NAME</div>
+                <div class="ticket-number" id="characterTicketNumber">TICKET #XXX-00000</div>
+                <div class="ticket-verify">VERIFY</div>
+                <div class="ticket-hologram"></div>
+            </div>
+            
+            <div class="payment-container">
+                <p>Purchase this collectible ticket for $10.00</p>
+                <button class="payment-button" id="purchaseButton">BUY TICKET</button>
+                <p class="ticket-terms">This NFT will be sent to your connected wallet after payment</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html> 
